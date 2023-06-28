@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Пустая структура для оптимизации использования памяти
 type void struct{}
 
 var member void
