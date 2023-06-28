@@ -17,7 +17,7 @@ func main() {
 	nWorkers := *nWorkersFlag
 	fmt.Println("number of workers:", nWorkers)
 	ctx, cancel := context.WithCancel(context.Background())
-	numChan := make(chan int, 2)
+	numChan := make(chan int)
 	go func(ctx context.Context) {
 		for {
 			select {
