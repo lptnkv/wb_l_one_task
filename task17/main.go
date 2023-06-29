@@ -6,7 +6,7 @@ func main() {
 	// Отсортированный массив
 	arr := []int{2, 15, 27, 44, 100, 191, 250, 1000, 1565, 2023, 3456}
 	fmt.Println(arr)
-	search := 10[]
+	search := 100
 	pos := binarySearch(arr, search)
 	if pos != -1 {
 		fmt.Printf("%d found at index %d\n", search, pos)
