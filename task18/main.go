@@ -6,21 +6,25 @@ import (
 	"sync/atomic"
 )
 
+// С использованием мьютекса
 type MutexCounter struct {
 	val int
 	mu  *sync.Mutex
 }
 
+// Функция инкремента значения
 func (c *MutexCounter) Increment() {
 	c.mu.Lock()
 	c.val += 1
 	c.mu.Unlock()
 }
 
+// Вывод на экран
 func (c *MutexCounter) PrintValue() {
 	fmt.Println(c.val)
 }
 
+// С использованием типа atomic.Int64
 type AtomicCounter struct {
 	val atomic.Int64
 }
